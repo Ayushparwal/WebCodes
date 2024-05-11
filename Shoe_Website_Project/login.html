@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LX Shoes</title>
+    <link rel="shortcut icon" href="new_logo.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgb(234, 246, 242);
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .image img{
+            width: 300px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .checkbox-container input {
+            margin-right: 8px;
+        }
+
+        button {
+            background-color: #000000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #464343;
+        }
+
+        #login-message {
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        #login-message.success {
+            color: green;
+        }
+
+        #login-message.error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="image">
+            <img src="shoe_splash3.jpg" alt="shoe">
+        </div>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I accept the terms and conditions</label>
+            </div>
+
+            <button type="button" onclick="submitForm()">Login</button>
+        </form>
+
+        <div id="login-message"></div>
+    </div>
+
+    <script>
+        function submitForm() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var terms = document.getElementById('terms').checked;
+
+            var message = document.getElementById('login-message');
+            message.style.display = 'none';
+
+            if (email && password && terms) {
+                message.textContent = 'Login successful!';
+                message.className = 'success';
+                message.style.display = 'block';
+                setTimeout(function () {
+                    window.location.href = 'redirect.html'; // Replace with the actual login page URL
+                }, 3000);
+            } else {
+                message.textContent = 'Please fill in all required fields and accept the terms.';
+                message.className = 'error';
+                message.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

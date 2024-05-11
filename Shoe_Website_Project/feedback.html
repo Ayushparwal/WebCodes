@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LX - Shoes Feedback</title>
+    <link rel="shortcut icon" href="new_logo.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4eded;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: rgb(239, 245, 248);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #535252;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #04661e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #317808;
+        }
+
+        #feedback-messages {
+            margin-top: 20px;
+        }
+
+        #feedback-messages p {
+            margin: 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #63fa90;
+            border-radius: 4px;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h2>LX Shoes Feedback</h2>
+       
+        <h4 style="color : rgb(179, 255, 66)">"Step Into Style, Stride With Confidence: LX Shoes"</h4>
+    </header>
+
+    <section>
+        <div id="shoe-brand-images"></div>
+        <form id="feedbackForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Feedback:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+        </form>
+
+        <div id="feedback-messages"></div>
+    </section>
+
+    <script>
+        function submitFeedback() {
+            // Get form data
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            // Validate form data (you can add more validation as needed)
+
+            // Display feedback message
+            var feedbackMessages = document.getElementById('feedback-messages');
+            var feedbackMessage = document.createElement('p');
+            feedbackMessage.textContent = 'Thank you, ' + name + '! Your feedback has been received.';
+            feedbackMessages.appendChild(feedbackMessage);
+
+            // Reset form
+            document.getElementById('feedbackForm').reset();
+        }
+    </script>
+</body>
+</html>

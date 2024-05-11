@@ -1,0 +1,96 @@
+body {
+    background-image: url(''); /* Replace 'path/to/your/background-image.jpg' with the actual path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 850px;
+    opacity: 1;
+    background-color: rgba(207, 242, 219, 0.6); /* Optional: Add transparency to the background */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.white-text a {
+    color: #fff !important;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #000 !important;
+}
+header {
+    background-color: #2c2c2c;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+.company-info, .mission-vision, .social-media, .copyright {
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+section {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+img {
+    width: 30px; 
+    height: auto;
+}
+.navbar-nav li.nav-item a.nav-link:hover {
+    background-color: #676d78; /* Light color for hover effect */
+    color: #333; /* Text color on hover */
+}
+
+/* Optional: Change the color of the active link */
+.navbar-nav li.nav-item a.nav-link.active {
+    background-color: #f6cdcd; /* Light color for the active link */
+    color: #333; /* Text color for the active link */
+}

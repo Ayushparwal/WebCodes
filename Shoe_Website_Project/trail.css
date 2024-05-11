@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.white-text a {
+    color: #fff !important;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #000 !important;
+}
+
+header {
+    background-color: #2c2c2c;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.company-info, .mission-vision, .social-media, .copyright {
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+section {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #accef3;
+}
+
+img {
+    width: 30px; 
+    height: auto;
+}
+.navbar-nav li.nav-item a.nav-link:hover {
+    background-color: #676d78; /* Light color for hover effect */
+    color: #333; /* Text color on hover */
+}
+
+/* Optional: Change the color of the active link */
+.navbar-nav li.nav-item a.nav-link.active {
+    background-color: #ffffff; /* Light color for the active link */
+    color: #333; /* Text color for the active link */
+}
+
+.theme-switch {
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff; /* Initial color of the icons */
+    transition: color 0.3s ease;
+}
+
+.theme-switch:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* styles.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* dark theme and light theme. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
