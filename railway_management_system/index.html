@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Railway Ticket Reservation System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    
+</head>
+
+<style>
+    .registration-container {
+        font-size: 18px;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+        font-size: 20px;
+}
+body{
+    background-color: rgb(180, 243, 251);
+}
+    
+</style>
+
+<body>
+    <div class="title-container">
+       <img src="trainrail.jpeg" alt="Railway Ticket Reservation" style="width: 100px; height: auto; float: left; margin-right: 20px; padding-top: 20px; padding-left:30px;">
+
+        <h1>Online Railway Ticket Reservation System</h1>
+    </div>
+    
+    <div class="marquee-container">
+        <!-- <marquee class="marquee" scrollamount="25">Welcome to Indian Railways</marquee> -->
+        <marquee class="marquee" scrollamount="25">Welcome to Indian Railways        ......       भारतीय रेलवे में आपका स्वागत है</marquee>
+        
+        
+    </div>
+<!-- User Registration Section -->
+<div id="registration_section" style="display: flex; align-items: center;">
+    <img src="rail.jpeg" alt="Left Image" style="width: 500px; height: 500px; margin-right: 20px;">
+    <div class="registration-container">
+        <h2>User Registration</h2>
+        <form action="register.php" method="post" style="display: inline-block;">
+            <label for="reg_username">Username:</label>
+            <input type="text" id="reg_username" name="reg_username" required><br>
+            <label for="reg_password">Password:</label>
+            <input type="password" id="reg_password" name="reg_password" required><br>
+            <!-- Add more registration fields as needed -->
+            <input type="submit" value="Register">
+        </form>
+    </div>
+    
+    <img src="rail2.jpeg" alt="Right Image" style="width: 510px; height: 500px; margin-left: 20px;">
+</div>
+
+
+    <!-- Password Recovery Section -->
+    <!-- <div id="password_recovery_section">
+        <h2>Password Recovery</h2>
+        <form action="recover_password.php" method="post">
+            <label for="recover_email">Email:</label>
+            <input type="email" id="recover_email" name="recover_email" required><br>
+            <input type="submit" value="Recover Password">
+        </form>
+    </div> -->
+
+    <!-- Ticket Booking Section -->
+
+
+    <!-- Ticket Cancellation Section -->
+    
+
+ <!-- Booking History Section -->
+ <div id="history_section">
+    <h2>Booking History</h2>
+    <table id="booking_history_table">
+        <thead>
+            <tr>
+                <th>Ticket ID</th>
+                <th>Train ID</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Booking Date</th>
+                <th>Fare</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="booking_history_body">
+            <!-- Table body will be populated dynamically using JavaScript -->
+        </tbody>
+    </table>
+</div>
+
+
+<script>
+    // Function to handle ticket cancellation
+    function cancelTicket(ticketId) {
+        // Send a POST request to cancel_ticket.php with the ticket ID to cancel
+        fetch('cancel_ticket.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ cancel_ticket_id: ticketId }),
+        })
+        .then(response => response.text())
+        .then(result => {
+            console.log(result); // Log the cancellation result
+
+            // Reload the booking history after cancellation
+            fetchBookingHistory();
+        })
+        .catch(error => console.error('Error cancelling ticket:', error));
+    }
+
+    // Function to fetch booking history data from booking_history.php
+    function fetchBookingHistory() {
+        fetch('booking_history.php')
+        .then(response => response.json())
+        .then(data => {
+            showSection('history_section');
+    
+            // Get the table body element
+            const tbody = document.getElementById('booking_history_body');
+            tbody.innerHTML = ''; // Clear existing rows before populating new ones
+    
+            // Loop through the data and create table rows
+            data.forEach(booking => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${booking['TicketID']}</td>
+                    <td>${booking['TrainID']}</td>
+                    <td>${booking['Source']}</td>
+                    <td>${booking['Destination']}</td>
+                    <td>${booking['BookingDate']}</td>
+                    <td>${booking['Fare']}</td>
+                    <td>${booking['Status']}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        })
+        .catch(error => console.error('Error fetching booking history:', error));
+    }
+    
+    // Fetch booking history data initially
+    fetchBookingHistory();
+</script>
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+
+    <!-- Admin Panel Section -->
+    
+</body>
+</html>

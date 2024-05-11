@@ -1,0 +1,248 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5; /* Light gray background color */
+    color: #444; /* Dark text color */
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Styles for the title */
+.title-container {
+    border-radius: 10px;
+    border: 2px solid #3498db; /* Blue border */
+    padding: 10px;
+    background-color: #efdba4; /* Blue background color */
+    color: white;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #000000; /* White color for headings */
+    font-size: 3rem; /* Larger font size */
+    margin-bottom: 20px; /* Increased margin */
+}
+
+/* Styles for each section */
+section {
+    margin-bottom: 30px; /* Increased margin */
+    padding: 20px; /* Added padding */
+    background-color: #ffffff; /* White background */
+    border-radius: 10px;
+}
+
+h2 {
+    margin-bottom: 15px; /* Increased margin */
+    color: #333; /* Darker shade of primary color */
+    font-size: 2rem; /* Slightly larger font size */
+    text-align: center;
+}
+
+/* Styles for forms */
+form {
+    background-color: #f9f9f9; /* Light gray background for forms */
+    padding: 25px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Improved box shadow */
+    max-width: 400px; /* Limiting form width */
+    margin: 0 auto; /* Centering the form horizontally */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333; /* Darker text color */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    margin-bottom: 20px; /* Increased margin */
+    border: 1px solid #ccc; /* Light border color */
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Smooth transition for input focus */
+    /* Normal font size */
+    background-color: #f5f5f5; /* Light gray background color */
+    padding-right: 1px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #3498db; /* Blue focus color */
+}
+
+input[type="submit"] {
+    padding: 12px 24px;
+    background-color: #2ecc71; /* Green color */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    font-size: 1rem; /* Normal font size */
+}
+
+input[type="submit"]:hover {
+    background-color: #27ae60; /* Darker shade for hover effect */
+}
+
+/* Styles for tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff; /* White background */
+}
+
+th, td {
+    padding: 15px; /* Increased padding */
+    border-bottom: 1px solid #ddd; /* Light border color */
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+
+/* Additional styles for specific sections */
+#history_section table,
+#schedule_section table,
+#admin_panel_section table {
+    margin-top: 20px; /* Increased margin */
+}
+
+#admin_panel_section form {
+    display: inline-block;
+    margin-right: 20px; /* Increased margin */
+}
+
+#booking_section {
+    margin-bottom: 30px;
+}
+
+#booking_section h2 {
+    margin-bottom: 15px;
+    color: #333; /* Dark text color */
+    font-size: 1.8rem;
+}
+
+#booking_section form {
+    margin-bottom: 30px;
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#booking_section label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333; /* Dark text color */
+}
+
+#booking_section input[type="text"],
+#booking_section input[type="number"],
+#booking_section input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    font-size: 1rem;
+}
+
+#booking_section input[type="text"]:focus,
+#booking_section input[type="number"]:focus,
+#booking_section input[type="date"]:focus {
+    border-color: #3498db; /* Blue focus color */
+}
+
+.book-ticket-button {
+    padding: 14px 28px;
+    background-color: #2ecc71; /* Green color */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+.book-ticket-button:hover {
+    background-color: #27ae60; /* Darker shade for hover effect */
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee {
+    display: inline-block;
+    padding-right: 20px; /* Adjust spacing between marquees */
+    font-size: 35px; /* Adjust font size */
+    color: #6aff00; /* Text color */
+    animation: marquee 12s linear;
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 10px; /* Border radius */
+    background-color: rgb(0, 0, 0);
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style for the options */
+option {
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark text color */
+}
+
+/* Style for the select when focused */
+select:focus {
+    outline: none;
+    border-color: #3498db; /* Blue focus color */
+}
+
+#destination {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style for the options */
+#destination option {
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark text color */
+}
+
+/* Style for the select when focused */
+#destination:focus {
+    outline: none;
+    border-color: #3498db; /* Blue focus color */
+}
